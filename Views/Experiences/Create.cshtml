@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model TravelBlog.Models.Experience
+
+<h2>Create</h2>
+<h4>Add a new Experience</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Story)
+    @Html.TextBoxFor(model => model.Story)
+
+    @Html.LabelFor(model => model.PlaceId)
+    @Html.DropDownList("PlaceId")
+
+    @Html.LabelFor(model => model.PersonId)
+    @Html.DropDownList("PersonId")
+    <input type="submit" value="Add new Experience" />
+}

@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<TravelBlog.Models.Place>
+
+<h2>Places!</h2>
+
+    @foreach (var place in Model)
+    {
+        <h4>@Html.DisplayFor(modelPlace => place.Name)</h4>
+    }
+
+  
+
+    <p>@Html.ActionLink("Add new place", "Create")</p>

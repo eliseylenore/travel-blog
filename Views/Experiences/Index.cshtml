@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<TravelBlog.Models.Experience>
+<h2>Experiences!</h2>
+
+@foreach (var experience in Model)
+{
+    <h4>@Html.DisplayFor(modelExperience => experience.Name)</h4>
+}
+
+
+
+<p>@Html.ActionLink("Add new experience", "Create")</p>
