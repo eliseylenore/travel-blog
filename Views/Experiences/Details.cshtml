@@ -1,0 +1,9 @@
+﻿@model TravelBlog.Models.Experience
+
+
+    <h2>Details</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+    @Html.DisplayNameFor(model => model.Story): @Html.DisplayFor(model => model.Story)
+@ViewBag.Person.Name
+    <p>@Html.ActionLink("Back to list", "Index")</p>
