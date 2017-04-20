@@ -16,7 +16,8 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "bootstrap": "3.3.7"
+    "bootstrap": "3.3.7",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.0.1"
    },
 
     "tools": {

@@ -9,10 +9,10 @@
 
 <h2>Places!</h2>
 
-    @foreach (var place in Model)
-    {
-        <h4>@Html.DisplayFor(modelPlace => place.Name)</h4>
-    }
+@foreach (var place in Model)
+{
+    <h4>@Html.DisplayFor(modelExperience => place.Name)| @Html.ActionLink("Details", "Details", new { id = place.PlaceId })</h4>
+}
 
   
 

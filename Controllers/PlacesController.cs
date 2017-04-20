@@ -31,5 +31,11 @@ namespace TravelBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult Details(int id)
+        {
+            var thisPlace = db.Places.Include(places => places.Experiences).FirstOrDefault(places => places.PlaceId == id);
+            return View(thisPlace);
+
+        }
     }
 }
