@@ -32,5 +32,12 @@ namespace TravelBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Details(int id)
+        {
+            var thisPerson = db.People.Include(people => people.Experiences).FirstOrDefault(people => people.PersonId == id);
+            return View(thisPerson);
+            
+        }
     }
 }

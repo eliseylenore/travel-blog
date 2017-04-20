@@ -8,9 +8,9 @@
 @model IEnumerable<TravelBlog.Models.Person>
 <h2>People</h2>
 
-@foreach (var experience in Model)
+@foreach (var person in Model)
 {
-    <h4>@Html.DisplayFor(modelExperience => experience.Name)</h4>
+    <h4>@Html.DisplayFor(modelExperience => person.Name)| @Html.ActionLink("Details", "Details", new { id = person.PersonId })</h4>
 }
 
 

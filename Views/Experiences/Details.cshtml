@@ -1,9 +1,13 @@
-﻿@model TravelBlog.Models.Experience
+﻿@{
+    ViewData["Title"] = "Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TravelBlog.Models.Experience
 
 
     <h2>Details</h2>
     <hr />
-    @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-    @Html.DisplayNameFor(model => model.Story): @Html.DisplayFor(model => model.Story)
-@ViewBag.Person.Name
+    <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+   <h4>@Html.DisplayNameFor(model => model.Story): @Html.DisplayFor(model => model.Story)</h4> 
+    <h4>Person: @ViewBag.Person.Name</h4>
     <p>@Html.ActionLink("Back to list", "Index")</p>
