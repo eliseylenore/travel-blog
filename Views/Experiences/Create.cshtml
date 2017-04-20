@@ -12,16 +12,21 @@
 <h4>Add a new Experience</h4>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-
-    @Html.LabelFor(model => model.Story)
-    @Html.TextBoxFor(model => model.Story)
-
-    @Html.LabelFor(model => model.PlaceId)
-    @Html.DropDownList("PlaceId")
-
-    @Html.LabelFor(model => model.PersonId)
-    @Html.DropDownList("PersonId")
-    <input type="submit" value="Add new Experience" />
-}
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Story)
+        @Html.TextAreaFor(model => model.Story, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.PlaceId)
+        @Html.DropDownListFor(model => model.Name, (IEnumerable<SelectListItem>)ViewBag.PlaceId, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.PersonId)
+        @Html.DropDownListFor(model => model.Name, (IEnumerable<SelectListItem>)ViewBag.PersonId, new { @class = "form-control" })
+    </div>
+        <input type="submit" value="Add new Experience" />
+        }
